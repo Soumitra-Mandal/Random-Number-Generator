@@ -14,6 +14,7 @@ useEffect(()=>{
 
   return (
     <div className="App">
+    <h1>Welcome</h1>
      <p id = "time">{time}</p>
       
     </div>
