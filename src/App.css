@@ -29,3 +29,9 @@ p{
   position: absolute;
   left:56.5%;
 }
+
+ol{
+  position: absolute;
+  left:45.5%;
+  padding: 10px;
+}
