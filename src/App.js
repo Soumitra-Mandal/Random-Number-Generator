@@ -1,22 +1,32 @@
-import React, {useState,useEffect } from 'react';
+import React, {useState } from 'react';
 import './App.css';
 
 function App() {
-const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-useEffect(()=>{
-  setInterval(()=>{
-    setTime(new Date().toLocaleTimeString());
-  }, 1000);
+const [nm, setNm] = useState('');
+const [name, setName] = useState('');
 
-});
+const handleClick = ()=>{
+  if(nm!==''){
+    setName(nm);
+    setNm('');
+  }
+
+} 
 
 
+const handleChange = (e)=>{
+  setNm(e.target.value);
+} 
+
+// Use a conditonal rendering statement 
+// refer to docs
   return (
     <div className="App">
     <h1>Welcome</h1>
-     <p id = "time">{time}</p>
-      
+    <input type="text" name="name" id = 'nm' onChange = {handleChange} value = {nm}/>
+    <button onClick = {handleClick} id = 'btn'>Enter</button>
+<p>{name}</p>
     </div>
   );
 }
